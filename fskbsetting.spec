@@ -18,10 +18,6 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 %description
 fsKBSetting is GUI front-end for setxkbmap command.
 
-Authors:
---------
-    FSnow <fsnow@yandex.ru>
-
 %prep
 %setup -q
 %patch0
@@ -35,7 +31,8 @@ autoreconf --force --install --symlink
 
 %install
 
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
+
 %{makeinstall}
 mkdir %{buildroot}%{_datadir}/pixmaps
 cp %{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
@@ -43,7 +40,7 @@ cp %{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
 %find_lang %{name}
 
 %clean
-[ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
@@ -52,4 +49,3 @@ cp %{name}.png %{buildroot}%{_datadir}/pixmaps/%{name}.png
 %{_bindir}/*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/pixmaps/%{name}.png
-
