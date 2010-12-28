@@ -1,20 +1,10 @@
-#
-# spec file for package fskbsetting (Version 0.3)
-#
-# Copyright (c) 2010 Kyrill Detinov
-# This file and all modifications and additions to the pristine
-# package are under the same license as the package itself.
-#
-
-# norootforbuild
-
 Name:           fskbsetting
 Version:        0.3
 Release:        %mkrel 3
 License:        GPLv3
 Summary:        GUI Front-end for setxkbmap Command
 URL:            http://forum.runtu.org/index.php/topic,5579.0.html
-Group:          System/X11/Utilities
+Group:          System/X11
 Source0:        %{name}-%{version}.tar.bz2
 Source1:	fskbsetting.png
 # PATCH-FIX-OPENSUSE fskbsetting-0.3-desktop.patch lazy.kent.suse@gmail.com
