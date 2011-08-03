@@ -10,7 +10,7 @@ Source0:        %{name}-%{version}.tar.bz2
 # -- correct desktop-file
 Patch0:         fskbsetting-0.3-desktop.patch
 Patch1:		fskbsetting.autostart.patch
-BuildRequires:  gcc-c++ intltool
+BuildRequires:  gcc-c++ intltool automake
 BuildRequires: %{_lib}wxgtk2.8-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
