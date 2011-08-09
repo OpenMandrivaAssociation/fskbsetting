@@ -1,15 +1,11 @@
 Name:           fskbsetting
-Version:        0.3
-Release:        %mkrel 4
+Version:        0.3.1
+Release:        %mkrel 1
 License:        GPLv3
 Summary:        GUI Front-end for setxkbmap Command
-URL:            http://forum.runtu.org/index.php/topic,5579.0.html
+URL:            http://code.google.com/p/mandriva-lxde
 Group:          System/X11
-Source0:        %{name}-%{version}.tar.bz2
-# PATCH-FIX-OPENSUSE fskbsetting-0.3-desktop.patch lazy.kent.suse@gmail.com
-# -- correct desktop-file
-Patch0:         fskbsetting-0.3-desktop.patch
-Patch1:		fskbsetting.autostart.patch
+Source0:        http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 BuildRequires:  gcc-c++ intltool automake
 BuildRequires: %{_lib}wxgtk2.8-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -19,8 +15,6 @@ fsKBSetting is GUI front-end for setxkbmap command.
 
 %prep
 %setup -q
-%patch0
-%patch1
 
 %build
 autoreconf --force --install --symlink
