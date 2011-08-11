@@ -1,5 +1,5 @@
 Name:           fskbsetting
-Version:        0.3.1
+Version:        0.3.2
 Release:        %mkrel 1
 License:        GPLv3
 Summary:        GUI Front-end for setxkbmap Command
