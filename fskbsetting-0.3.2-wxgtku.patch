@@ -1,0 +1,27 @@
+diff -urN fskbsetting-0.3.2/src/myframe.cc fskbsetting-0.3.2-patched/src/myframe.cc
+--- fskbsetting-0.3.2/src/myframe.cc	2011-08-11 20:33:58.000000000 +1100
++++ fskbsetting-0.3.2-patched/src/myframe.cc	2012-01-19 16:33:48.065613677 +1100
+@@ -587,10 +587,10 @@
+ 						else if(level_4->GetName() == wxT("description"))
+ 						{
+ 							wxString value = level_4->GetNodeContent();
+-							chLayout[0]->Append(_(value));
+-							chLayout[1]->Append(_(value));
+-							chLayout[2]->Append(_(value));
+-							chLayout[3]->Append(_(value));
++							chLayout[0]->Append(value);
++							chLayout[1]->Append(value);
++							chLayout[2]->Append(value);
++							chLayout[3]->Append(value);
+ 						}
+ 						level_4 = level_4->GetNext();
+ 					}
+@@ -674,7 +674,7 @@
+ 										else if(level_6->GetName() == wxT("description"))
+ 										{
+ 											wxString value = level_6->GetNodeContent();
+-											chVariant[N]->Append(_(value));
++											chVariant[N]->Append(value);
+ 										}
+ 										level_6 = level_6->GetNext();
+ 									}
