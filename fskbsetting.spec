@@ -25,24 +25,17 @@ autoreconf --force --install --symlink
 %make
 
 %install
-%__rm -rf %{buildroot}
-
 %makeinstall_std
-%__mkdir_p %{buildroot}%{_datadir}/pixmaps
-%__rm -rf %{buildroot}%{_prefix}/doc/%{name}
+mkdir_p %{buildroot}%{_datadir}/pixmaps
+rm -r %{buildroot}%{_prefix}/doc/%{name}
 
 %find_lang %{name}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog README TRANSLATORS
 %{_datadir}/%{name}
 %{_bindir}/*
 %{_datadir}/applications/%{name}.desktop
-
 
 %changelog
 * Thu Jan 19 2012 Andrey Bondrov <abondrov@mandriva.org> 0.3.2-3mdv2012.0
