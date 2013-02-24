@@ -1,0 +1,11 @@
+--- fskbsetting-0.3.2/configure.ac~	2011-08-11 12:13:37.000000000 +0200
++++ fskbsetting-0.3.2/configure.ac	2013-02-24 05:17:24.386235313 +0100
+@@ -9,7 +9,7 @@ AM_MAINTAINER_MODE
+ 
+ AC_ISC_POSIX
+ AC_PROG_CC
+-AM_PROG_CC_STDC
++AC_PROG_CC_STDC
+ AC_HEADER_STDC
+ 
+ WXCONFIG=wx-config

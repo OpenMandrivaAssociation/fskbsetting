@@ -7,6 +7,7 @@ URL:		http://code.google.com/p/mandriva-lxde
 Group:		System/X11
 Source0:	http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		fskbsetting-0.3.2-wxgtku.patch
+Patch1:		fskbsetting-0.3.2-automake-1.13-build-fix.patch
 BuildRequires:	gcc-c++
 BuildRequires:	intltool
 BuildRequires:	automake
@@ -18,6 +19,7 @@ fsKBSetting is GUI front-end for setxkbmap command.
 %prep
 %setup -q
 %patch0 -p1 -b .wxgtku~
+%patch1 -p1 -b .am113~
 autoreconf --force --install --symlink
 
 %build
@@ -26,7 +28,7 @@ autoreconf --force --install --symlink
 
 %install
 %makeinstall_std
-mkdir_p %{buildroot}%{_datadir}/pixmaps
+mkdir -p %{buildroot}%{_datadir}/pixmaps
 rm -r %{buildroot}%{_prefix}/doc/%{name}
 
 %find_lang %{name}
