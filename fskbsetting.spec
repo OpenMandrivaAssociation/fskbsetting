@@ -1,6 +1,6 @@
 Name:		fskbsetting
 Version:	0.3.2
-Release:	3
+Release:	4
 License:	GPLv3
 Summary:	GUI Front-end for setxkbmap Command
 URL:		http://code.google.com/p/mandriva-lxde
