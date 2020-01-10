@@ -18,7 +18,7 @@ fsKBSetting is GUI front-end for setxkbmap command.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 autoreconf --force --install --symlink
 
 %build
