@@ -4,7 +4,7 @@ Version:	0.3.2
 Release:	10
 License:	GPLv3
 Group:		System/X11
-Url:		http://code.google.com/p/mandriva-lxde
+Url:		https://code.google.com/p/mandriva-lxde
 Source0:	http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		fskbsetting-0.3.2-wxgtku.patch
 Patch1:		fskbsetting-0.3.2-automake-1.13-build-fix.patch
