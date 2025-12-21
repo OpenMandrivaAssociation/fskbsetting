@@ -9,6 +9,11 @@ Source0:	http://mandriva-lxde.googlecode.com/files/%{name}-%{version}.tar.gz
 Patch0:		fskbsetting-0.3.2-wxgtku.patch
 Patch1:		fskbsetting-0.3.2-automake-1.13-build-fix.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gcc-c++
 BuildRequires:	intltool
 BuildRequires:	wxgtku-devel
